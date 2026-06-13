@@ -12,3 +12,8 @@ button {
 #output {
     margin-top: 20px;
 }
+#map {
+    height: 500px;
+    width: 90%;
+    margin: 20px auto;
+}

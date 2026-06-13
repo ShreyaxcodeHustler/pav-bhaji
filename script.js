@@ -1,5 +1,6 @@
 const button=document.getElementById("locationButton");
 const output=document.getElementById("output");
+let map;
 
 button.addEventListener("click", getLocation);
 
@@ -10,7 +11,7 @@ function getLocation(){
 async function showPosition(position){
     const latitude=position.coords.latitude;
     const longitude=position.coords.longitude;
-
+    initializeMap(latitude, longitude);
     output.textContent='Latitude:${latitude} Longitude:${longitude}';
     searchNearby(latitude, longitude);
 }
@@ -42,4 +43,22 @@ function displayPlaces(places){
         item.textContent=place.display_name;
         placesList.appendChild(item);
     })
+}
+
+function initializeMap(latitude, longitude){
+    if(map){
+        map.remove();
+    }
+    map=L.map("map").setView([latitude,longitude], 15);
+    L.tileLayer(
+        "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+        {
+            maxZoom: 19
+        }
+    ).addTo(map);
+        L.marker(
+        [latitude, longitude]
+    ).addTo(map)
+    .bindPopup("You are here")
+    .openPopup();
 }
