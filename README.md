@@ -87,7 +87,7 @@ Pav-Bhaji-Finder/
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/pav-bhaji-finder.git
+git clone [https://github.com/your-username/Nearby-food-finder-using-leaflet-and-openstreetmap.git]
 ```
 
 2. Open the project folder.
