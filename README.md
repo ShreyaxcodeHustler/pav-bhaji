@@ -1,4 +1,4 @@
-# 🍽️ Pav Bhaji Finder
+# 🍽️ Nearby Food Finder 
 
 A location-based web application that helps users discover nearby restaurants using OpenStreetMap data and interactive maps.
 
