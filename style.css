@@ -18,3 +18,34 @@ button {
     margin-top: 20px;
     border: 2px solid black;
 }
+.place-card {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 12px;
+    margin: 8px 0;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.place-card:hover {
+    transform: scale(1.02);
+    background: #f7f7f7;
+}
+
+.place-name {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 4px;
+}
+
+.place-address {
+    font-size: 13px;
+    color: #555;
+}
+
+.place-distance {
+    font-size: 13px;
+    color: #0077cc;
+    margin-top: 4px;
+}
